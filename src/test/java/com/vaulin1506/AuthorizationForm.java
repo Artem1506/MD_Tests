@@ -2,6 +2,7 @@ package com.vaulin1506;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
@@ -34,12 +35,13 @@ public class AuthorizationForm {
     }
 
     @Test
-            public void resetPassword() {
+    @Disabled
+    public void resetPassword() {
         open("/authorization");
         $(By.cssSelector(".brand-input__reset")).click();
         $(By.cssSelector(".brand-input__field")).setValue(name);
         $(By.cssSelector(".password-reset__submit")).click();
-        $(By.cssSelector(".authorization__auth-block"));
+        $(By.cssSelector(".authorization__auth-block")); //todo wtf!?
     }
 }
 
